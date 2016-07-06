@@ -1,0 +1,11 @@
+.modal-header
+  %a.close{"data-dismiss" => "modal"} ×
+  %h1 
+    = contact.new_record? ? 'New Contact' : "Edit contact"
+= simple_form_for contact, class: 'clearfix', remote: true do |f|
+  .modal-body
+    = f.input :firstname
+    = f.input :lastname
+    = f.input :number
+  .modal-footer
+    = f.submit 'Save', class: 'btn btn-primary'

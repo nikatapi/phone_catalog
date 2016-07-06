@@ -1,0 +1,3 @@
+m = $('#modal');
+m.html('<%= j(render partial: 'contact_form', locals: {contact: @contact}) %>');
+m.modal('show');

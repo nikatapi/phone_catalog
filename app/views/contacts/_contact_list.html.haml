@@ -1,0 +1,23 @@
+- if contacts.empty?
+  %span.text-warning There are no contacts!
+- else
+  %table.table.table-hover.table-bordered
+    %thead
+      %tr
+        %th First Name
+        %th Last Name
+        %th Number
+        %th Actions
+    %tbody
+      - contacts.each do |contact|
+        %tr
+          %td
+            %strong= contact.firstname
+          %td
+            %strong= contact.lastname
+          %td.text-info= contact.number
+          %td
+            = link_to contact_path(contact), remote: true, method: :delete, data: {confirm: "Are you sure you want to delete this contact?"} do
+              %i.icon-remove
+            = link_to edit_contact_path(contact), remote: true do
+              %i.icon-edit
