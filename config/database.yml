@@ -14,8 +14,8 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: postgresql
-  database: production_db_contactbook
-  pool: 5
-  timeout: 5000
+#production:
+ # adapter: postgresql
+  #database: production_db_contactbook
+  #pool: 5
+  #timeout: 5000
